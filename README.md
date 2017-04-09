@@ -1,6 +1,8 @@
 # SakuraObjectStorage
 The Ruby on Rails Plugin for Sakura Cloud Object Storage access.
 
+THIS IS UNDER CONSTRUCTION!
+
 ## Usage
 How to use my plugin.
 
