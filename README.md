@@ -1,5 +1,5 @@
 # SakuraObjectStorage
-Short description and motivation.
+The Ruby on Rails Plugin for Sakura Cloud Object Storage access.
 
 ## Usage
 How to use my plugin.
@@ -26,3 +26,4 @@ Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
