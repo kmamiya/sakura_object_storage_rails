@@ -21,24 +21,37 @@ THIS IS UNDER CONSTRUCTION!
 ```ruby
 require 'sakura_object_storage'
 
-instance = SakuraObjectStorage.new( bucket_name, api_key, api_secret_key )
+instance = SakuraObjectStorage::Storage.new( bucket_name, api_key, api_secret_key )
+
+# Create an object.
+body = 'object contents.'
+instance.put_object('object name', body, body.size)
+
+# Get list
+list = instane.get_object_list[:contents]
+
+# Get an object 
+obj = instance.get_object('object name')
+
+# Get an information of object
+info = instance.get_object_info('object_name')
+etag = info['ETag']
+last_modified = info['LastModified']
+
+# Delete an object
+instance.delete_object('object name')
 ```
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sakura_object_storage'
+gem 'sakura_object_storage', git: 'https://github.com/kmamiya/sakura_object_storage_rails.git'
 ```
 
 And then execute:
 ```bash
 $ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install sakura_object_storage
 ```
 
 ## Contributing
