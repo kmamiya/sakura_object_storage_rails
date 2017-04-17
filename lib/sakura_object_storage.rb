@@ -97,5 +97,17 @@ module SakuraObjectStorage
       })
       return @last_response.kind_of? Net::HTTPSuccess
     end
+
+    def object_info(name)
+      header_date = DateTime.now.httpdate
+      path = self.object_path(name)
+
+      session = self.http_session
+      @last_response = session.head(path, {
+        'Date'          => header_date,
+        'Authorization' => self.authorization_header('HEAD', path, header_date)
+      })
+      return ( @last_response.kind_of? Net::HTTPNotFound )? nil : @last_response
+    end
   end
 end

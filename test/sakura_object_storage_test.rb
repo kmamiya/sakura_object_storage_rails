@@ -127,4 +127,22 @@ class SakuraObjectStorage::Test < ActiveSupport::TestCase
     result = @target.delete_object(delete_target_name)
     assert result, @target.last_response
   end
+
+  test 'object_info should get an object information.' do
+    new_object = 'TEST DATA' + DateTime.now.strftime('%Y-%m-%d %H:%M:%S')
+    new_object_name = 'new_object_for_get_object_info_test'
+    assert @target.put_object(new_object_name, new_object, new_object.size)
+
+    result = @target.object_info(new_object_name)
+    assert_kind_of Net::HTTPSuccess, result
+    assert result.key?('etag')
+    assert result.key?('last-modified')
+
+    assert @target.delete_object(new_object_name)
+  end
+
+  test 'object_info called with not-exist object should returned nil.' do
+    assert_nil @target.object_info('not exist object')
+    assert_kind_of Net::HTTPNotFound, @target.last_response, @target.last_response
+  end
 end
