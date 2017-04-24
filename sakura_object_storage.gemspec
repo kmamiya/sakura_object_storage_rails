@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = SakuraObjectStorage::VERSION
   s.authors     = ["Kentarou Mamiya"]
   s.email       = ["kmamiya@logicalrabbit.jp"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SakuraObjectStorage."
-  s.description = "TODO: Description of SakuraObjectStorage."
+  s.homepage    = "http://logicalrabbit.jp/"
+  s.summary     = "Summary of SakuraObjectStorage (Not writing yet)."
+  s.description = "Description of SakuraObjectStorage (Not writing yet)."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
