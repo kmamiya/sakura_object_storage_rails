@@ -8,10 +8,8 @@ The Ruby on Rails Plugin for Sakura Cloud Object Storage access.
   1. put an object. (PUT)
   1. delete an object. (DELETE)
   1. get only an object-information. (HEAD, get only ETag and LastModified.)
-
-
-THIS IS UNDER CONSTRUCTION!
-
+* NOT support the following function.
+  1. multipart uploading for large object (over 4GiB) ... It is need?? ( I don't need, maybe. )
 
 ## Usage
 
