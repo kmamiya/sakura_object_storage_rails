@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'net/http'
 require 'yaml'
-require 'base64'
 
 require 'sakura_object_storage'
 

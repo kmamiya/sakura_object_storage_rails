@@ -1,6 +1,7 @@
 require 'openssl'
 require 'net/http'
 require 'rexml/parsers/sax2parser'
+require 'base64'
 
 require 'sakura_object_storage/list_bucket_result_parser'
 
