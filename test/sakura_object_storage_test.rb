@@ -1,7 +1,11 @@
-require 'test_helper'
+require 'test/unit'
 require 'net/http'
+require 'yaml'
+require 'base64'
 
-class SakuraObjectStorage::Test < ActiveSupport::TestCase
+require 'sakura_object_storage'
+
+class SakuraObjectStorageTest < Test::Unit::TestCase
 
   @conf   = nil
   @target = nil
@@ -76,7 +80,7 @@ class SakuraObjectStorage::Test < ActiveSupport::TestCase
     new_object_name = 'new_object'
 
     result = @target.put_object(new_object_name, new_object, new_object.size)
-    assert result, @target.last_response
+    assert result, "#{@target.last_response}"
 
     after_object_list = @target.get_object_list
     assert_equal 1, after_object_list[:contents].size
@@ -125,7 +129,7 @@ class SakuraObjectStorage::Test < ActiveSupport::TestCase
     assert @target.put_object(delete_target_name, delete_target, delete_target.size)
 
     result = @target.delete_object(delete_target_name)
-    assert result, @target.last_response
+    assert result, "#{@target.last_response}"
   end
 
   test 'object_info should get an object information.' do
