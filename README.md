@@ -26,15 +26,15 @@ body = 'object contents.'
 instance.put_object('object name', body, body.size)
 
 # Get list
-list = instane.get_object_list[:contents]
+list = instance.get_object_list()[:contents]
 
 # Get an object 
 obj = instance.get_object('object name')
 
 # Get an information of object
-info = instance.get_object_info('object_name')
-etag = info['ETag']
-last_modified = info['LastModified']
+info = instance.get_object_info('object name')
+etag = info['etag']
+last_modified = info['last-modified']
 
 # Delete an object
 instance.delete_object('object name')
@@ -58,4 +58,3 @@ http://logicalrabbit.jp/sakura-object-storage
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
