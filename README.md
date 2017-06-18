@@ -1,5 +1,5 @@
 # SakuraObjectStorage
-The Ruby on Rails Plugin for Sakura Cloud Object Storage access.
+The Ruby Plugin for Sakura Cloud Object Storage access.
 
 * Not Amazon S3 compartible, writing for only Sakura Cloud Object storage.
 * Support the following functions.
@@ -44,7 +44,7 @@ instance.delete_object('object name')
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sakura_object_storage', git: 'https://github.com/kmamiya/sakura_object_storage_rails.git'
+gem 'sakura_object_storage', git: 'https://github.com/kmamiya/sakura_object_storage_ruby.git'
 ```
 
 And then execute:
@@ -52,8 +52,9 @@ And then execute:
 $ bundle
 ```
 
-## Contributing
-Contribution directions go here.
+## Support page (Japanese)
+
+http://logicalrabbit.jp/sakura-object-storage
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
